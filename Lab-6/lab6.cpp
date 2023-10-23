@@ -5,6 +5,7 @@
 
 const int MAX_SIZE = 100;
 
+// Function prototypes
 void read(int matA[MAX_SIZE][MAX_SIZE], int matB[MAX_SIZE][MAX_SIZE], int& matrixSize, const std::string& filename);
 void print(const int matrix[MAX_SIZE][MAX_SIZE], int size);
 void add(const int matA[MAX_SIZE][MAX_SIZE], const int matB[MAX_SIZE][MAX_SIZE], int result[MAX_SIZE][MAX_SIZE], int size);
