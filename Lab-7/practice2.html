@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color and Border Control</title>
+    <style>
+        #color-paragraph {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>EECS 348 Lab Seven Practice Two</h1>
+
+    <label for="borderR">Border R(0-255):</label><br>
+    <input type="text" id="borderR" ><br>
+
+    <label for="borderG">Border G(0-255):</label><br>
+    <input type="text" id="borderG"><br>
+
+    <label for="borderB">Border B(0-255):</label><br>
+    <input type="text" id="borderB"><br>
+
+    <label for="borderWidth">Border Width:</label><br>
+    <input type="text" id="borderWidth"><br>
+
+    <label for="backgroundR">Background R(0-255):</label><br>
+    <input type="text" id="backgroundR"><br>
+
+    <label for="backgroundG">Background G(0-255):</label><br>
+    <input type="text" id="backgroundG"><br>
+
+    <label for="backgroundB">Background B(0-255):</label><br>
+    <input type="text" id="backgroundB"><br>
+
+    <button onclick="changeColorAndBorder()">Change the color!</button>
+
+    <div id="color-paragraph">
+        <p>Paragraph to be changed.</p>
+    </div>
+
+    <script>
+        function changeColorAndBorder() {
+            const borderR = document.getElementById('borderR').value;
+            const borderG = document.getElementById('borderG').value;
+            const borderB = document.getElementById('borderB').value;
+            const borderWidth = document.getElementById('borderWidth').value;
+            const backgroundR = document.getElementById('backgroundR').value;
+            const backgroundG = document.getElementById('backgroundG').value;
+            const backgroundB = document.getElementById('backgroundB').value;
+
+            const paragraph = document.getElementById('color-paragraph');
+
+            paragraph.style.borderColor = 'rgb(' + borderR + ',' + borderG + ',' + borderB + ')';
+            paragraph.style.backgroundColor = 'rgb(' + backgroundR + ',' + backgroundG + ',' + backgroundB + ')';
+            paragraph.style.borderWidth = borderWidth + 'px';
+        }
+    </script>
+</body>
+</html>
